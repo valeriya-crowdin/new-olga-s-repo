@@ -1,8 +1,13 @@
 export_languages: de
-
 files:
   - source: /*.*
     ignore:
       - /*.csv
       - /*.xml
     translation: /translations/%two_letters_code%/%original_file_name%
+  - source: /Multi*.csv
+    translation: /translation/%two_letters_code%/%original_file_name%
+    scheme: 'identifier,context,source_phrase,de,it,max_length'
+  - source: /Sample.csv
+    translation: /translation/%two_letters_code%/%original_file_name%
+    scheme: 'identifier,context,source_or_translation'
